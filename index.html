@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
   <head>
+    <title>Percentage Elapser</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://code.angularjs.org/1.6.1/angular.min.js"></script>
-    <script src="https://code.angularjs.org/1.6.1/angular-route.js"</script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="app.js"></script>
     <script src="controller.js"></script>
-    <!-- <script src="routes.js"></script> -->
     <link rel="stylesheet" type="text/css" href="app.css">
   </head>
 
   <body ng-controller='HomeController as vm'>
+
     <h1>Percentage of presidency elapsed</h1>
-    <h1>{{ vm.percent }}</h1>
+    <h1>{{ vm.percent }}%</h1>
+
   </body>
 
 </html>
