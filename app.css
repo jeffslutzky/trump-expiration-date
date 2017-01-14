@@ -8,6 +8,11 @@ svg {
   display: block;
 }
 
+a {
+  text-decoration: none;
+  color: #1692D9;
+}
+
 
 /* Sticky footer styles
 -------------------------------------------------- */
