@@ -7,8 +7,9 @@
 
     var start = new Date("Jan 20 2009 12:00:00").getTime();
     var end = new Date("Jan 20 2017 12:00:00").getTime();
-    var start = Date.now();
-    var end = Date.now()+10000;
+    // for testing
+    // var start = Date.now();
+    // var end = Date.now()+10000;
 
     var total = end - start;
 
@@ -17,11 +18,12 @@
         .attr("width", "90%")
         .attr("height", 200)
       .append("g")
-        .attr("transform", "translate(0, 25)")
+        .attr("transform", "translate(1, 25)")
       .append("rect")
         .attr("class", "outline")
-        .attr("width", "100%")
+        .attr("width", "99%")
         .attr("height", 50)
+        .attr("rx", 3)
         .style("stroke", "black")
         .style("stroke-width", 1)
         .style("fill", "orange")
@@ -37,7 +39,7 @@
 
     var endText = d3.select("g")
       .append("text")
-        .attr("x", "100%")
+        .attr("x", "99%")
         .attr("y", -10)
         .text("1/20/21")
         .style("text-anchor", "end")
@@ -59,8 +61,9 @@
         d3.select("g")
           .append("rect")
             .attr("class", "fill")
-            .attr("width", 100-(vm.percent)+"%")
+            .attr("width", 99-(vm.percent*.99)+"%")
             .attr("height", 50)
+            .attr("rx", 3)
             .style("stroke", "black")
             .style("stroke-width", 1)
             .style("fill", "white")
