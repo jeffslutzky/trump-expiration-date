@@ -5,13 +5,11 @@
 
     var vm = this;
 
+    // change these years before starting!!!!!!!
     var start = new Date("Jan 20 2009 12:00:00").getTime();
-    var end = new Date("Jan 20 2017 12:00:00").getTime();
-    // for testing
-    // var start = Date.now();
-    // var end = Date.now()+10000;
+    var finish = new Date("Jan 20 2017 12:00:00").getTime();
 
-    var total = end - start;
+    var total = finish - start;
 
     var svg = d3.select(".main")
       .append("svg")
@@ -48,26 +46,19 @@
 
     vm.updatePercent = function() {
         var now = Date.now();
-        var date = new Date();
-        var current_month = date.getMonth() + 1;
-        var current_day = date.getDate();
-        var current_year = date.getFullYear().toString().substr(2,2);
-        var fullDate = current_month + "/" + current_day + "/" + current_year
-
         var elapsed = now - start;
-        vm.percent = ((1 - elapsed/total) * 100).toFixed(7);
+        vm.percent = (elapsed/total * 100).toFixed(7);
 
         d3.select(".fill").remove();
         d3.select("g")
           .append("rect")
             .attr("class", "fill")
-            .attr("width", 99-(vm.percent*.99)+"%")
+            .attr("width", (vm.percent*.99)+"%")
             .attr("height", 50)
             .attr("rx", 3)
             .style("stroke", "black")
             .style("stroke-width", 1)
             .style("fill", "white")
-
     };
 
     vm.updatePercent();

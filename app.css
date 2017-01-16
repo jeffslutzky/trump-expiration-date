@@ -8,6 +8,15 @@ svg {
   display: block;
 }
 
+h6 {
+  margin-top: -20px;
+  margin-bottom: 25px;
+}
+
+img {
+  height: 150px;
+}
+
 a {
   text-decoration: none;
   color: #1692D9;
