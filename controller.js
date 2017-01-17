@@ -18,7 +18,7 @@
       .append("g")
         .attr("transform", "translate(1, 25)")
       .append("rect")
-        .attr("class", "outline")
+        .attr("class", "orange")
         .attr("width", "99%")
         .attr("height", 50)
         .attr("rx", 1)
@@ -46,19 +46,27 @@
 
     vm.updatePercent = function() {
         var now = Date.now();
-        var elapsed = now - start;
-        vm.percent = (elapsed/total * 100).toFixed(7);
 
-        d3.select(".fill").remove();
+        if (now >= start && now <= finish) {
+          var elapsed = now - start;
+          vm.percent = (elapsed/total * 100).toFixed(7);
+        } else if (now > finish) {
+          vm.percent = 100;
+        } else if (now < start) {
+          vm.percent = 0;
+        }
+
+        d3.select(".white").remove();
         d3.select("g")
           .append("rect")
-            .attr("class", "fill")
+            .attr("class", "white")
             .attr("width", (vm.percent*.99)+"%")
             .attr("height", 50)
             .attr("rx", 1)
             .style("stroke", "black")
             .style("stroke-width", 1)
             .style("fill", "white")
+
     };
 
     vm.updatePercent();

@@ -8,9 +8,13 @@ svg {
   display: block;
 }
 
-h6 {
+.main h6 {
   margin-top: -20px;
   margin-bottom: 25px;
+}
+
+.follow h6 {
+  margin-top: -70px;
 }
 
 img {
