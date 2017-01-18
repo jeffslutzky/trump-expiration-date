@@ -5,7 +5,9 @@
 
     var vm = this;
 
-    // change these years before starting!!!!!!!
+    // use these years before starting!!!!!!!
+    // var start = new Date("Jan 20 2017 12:00:00").getTime();
+    // var finish = new Date("Jan 20 2021 12:00:00").getTime();
     var start = new Date("Jan 20 2009 12:00:00").getTime();
     var finish = new Date("Jan 20 2017 12:00:00").getTime();
 
@@ -14,7 +16,7 @@
     var svg = d3.select(".main")
       .append("svg")
         .attr("width", "90%")
-        .attr("height", 200)
+        .attr("height", 100)
       .append("g")
         .attr("transform", "translate(1, 25)")
       .append("rect")
@@ -23,7 +25,7 @@
         .attr("height", 50)
         .attr("rx", 1)
         .style("stroke", "black")
-        .style("stroke-width", 1)
+        .style("stroke-width", .75)
         .style("fill", "orange")
 
     var startText = d3.select("g")
@@ -64,7 +66,7 @@
             .attr("height", 50)
             .attr("rx", 1)
             .style("stroke", "black")
-            .style("stroke-width", 1)
+            .style("stroke-width", .75)
             .style("fill", "white")
 
     };
