@@ -5,11 +5,8 @@
 
     var vm = this;
 
-    // use these years before starting!!!!!!!
-    // var start = new Date("Jan 20 2017 12:00:00").getTime();
-    // var finish = new Date("Jan 20 2021 12:00:00").getTime();
-    var start = new Date("Jan 20 2015 12:00:00").getTime();
-    var finish = new Date("Jan 20 2023 12:00:00").getTime();
+    var start = new Date("Jan 20 2017 12:00:00").getTime();
+    var finish = new Date("Jan 20 2021 12:00:00").getTime();
 
     var total = finish - start;
 
